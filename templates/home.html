@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>say hello</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/home.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">  
+</head>
+<body>
+  <img src="https://c.tenor.com/wgfWkomHhwgAAAAj/donald-duck-laughing.gif" alt="gif" />
+	{%for message in get_flashed_messages()%}
+	<div id = 'message'>
+	  <blockquote>
+	 
+      <p id="joke">    {{message}}</p>
+	  </blockquote>
+	  	<div id="jkbutton">
+	      <a href="javascript:location.reload();"><button class="jokebutton">Get joke!</button></a>
+	    </div>
+	</div>
+
+	  
+
+	</div>
+	{% endfor %}
+</body>
+</html>
